@@ -1,0 +1,13 @@
+.alc-saver__save-button {
+  padding: 3px;
+  margin-left: 10px; }
+
+.alc-saver__loader {
+  background: url("chrome-extension://__MSG_@@extension_id__/img/loader.gif");
+  border: none;
+  width: 16px;
+  height: 11px;
+  position: relative !important;
+  vertical-align: initial !important;
+  margin: 0 0 0 10px !important;
+  display: none; }

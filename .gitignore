@@ -1,0 +1,6 @@
+.idea
+*.zip
+*.ai
+node_modules
+typings
+src/js

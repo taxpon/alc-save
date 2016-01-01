@@ -1,0 +1,37 @@
+{
+  "name": "Alc English Word Save",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Save searched Alc words to Google Spread Sheet",
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "css": [
+        "css/alc-saver.css"
+      ],
+      "js": [
+        "js/content.min.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "js/embedded.min.js",
+    "img/loader.gif"
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+  "permissions": [
+    "<all_urls>",
+    "browsingData",
+    "storage"
+  ],
+  "icons": {
+    "16": "img/icon/icon_16.png",
+    "48": "img/icon/icon_48.png",
+    "128": "img/icon/icon_128.png"
+  }
+}
