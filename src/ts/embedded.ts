@@ -7,6 +7,7 @@ var loader_class = "alc-save__loader";
 var server_url: string = "";
 
 document.addEventListener(Env.eventName, function(e: CustomEvent){
+    Env.log(e.detail);
     server_url = e.detail.alcSaveUrl;
 });
 

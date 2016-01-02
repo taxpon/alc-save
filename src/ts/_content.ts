@@ -12,7 +12,10 @@ injectScript = function(file, node) {
     s.setAttribute('src', file);
     th.appendChild(s);
 
+    Env.log("Injecting");
+
     s.onload = function() {
+        Env.log("Finish loading");
         chrome.storage.sync.get({
             alcSaveUrl: "Please input server url."
         }, function(items) {

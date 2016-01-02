@@ -1,8 +1,8 @@
-.alc-saver__save-button {
+.alc-save__save-button {
   padding: 3px;
   margin-left: 10px; }
 
-.alc-saver__loader {
+.alc-save__loader {
   background: url("chrome-extension://__MSG_@@extension_id__/img/loader.gif");
   border: none;
   width: 16px;

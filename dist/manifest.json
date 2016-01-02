@@ -1,6 +1,6 @@
 {
   "name": "Alc English Word Save",
-  "version": "1.0",
+  "version": "1.0.1",
   "manifest_version": 2,
   "description": "Save searched Alc words to Google Spread Sheet",
   "content_scripts": [
@@ -9,7 +9,7 @@
         "<all_urls>"
       ],
       "css": [
-        "css/alc-saver.css"
+        "css/alc-save.css"
       ],
       "js": [
         "js/content.min.js"
