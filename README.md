@@ -19,6 +19,8 @@ If you click save button, this extension send POST request to the server specifi
 -------|--------
 | word | Selected English word |
 | meaning | Retrieved meaning of the word |
+| url | URL of the searched result |
+| pron (Optional) | Pronunciation of this word (if any) |
 
 
 ## License

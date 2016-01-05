@@ -1,6 +1,6 @@
 {
   "name": "Alc English Word Save",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "manifest_version": 2,
   "description": "Save searched Alc words to Google Spread Sheet",
   "content_scripts": [

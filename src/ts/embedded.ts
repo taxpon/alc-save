@@ -41,14 +41,14 @@ class SaveManager {
         element.next().hide();  // Loader
     }
 
-    public saveWord(word: string, meaning: string, activeButton: JQuery) {
+    public saveWord(word: string, meaning: string, pron: string, activeButton: JQuery) {
 
         SaveManager._activateLoader(activeButton);
         Env.log("Send request to :" + this.url);
         $.ajax({
             url: this.url,
             method: this.method,
-            data: { word: word, meaning: meaning }
+            data: { word: word, meaning: meaning, url: location.href, pron: pron }
         })
             .done(function(data){
                 if(data.code != 0) {
@@ -89,7 +89,8 @@ class AlcSave {
         $(".midashi").parent().on("click", "." + save_button_class, function(){
             var word = AlcSave._getMidashiText($(this));
             var midashi = AlcSave._getFirstMeaning($(this));
-            SaveManager.getInstance(server_url).saveWord(word, midashi, $(this));
+            var pron = AlcSave._getPronunciation($(this));
+            SaveManager.getInstance(server_url).saveWord(word, midashi, pron, $(this));
         });
     }
 
@@ -121,6 +122,12 @@ class AlcSave {
         }
 
         return $fm.text();
+    }
+
+    private static _getPronunciation(self) {
+        var $li = self.parent();
+        var $pr = $li.find(".pron");
+        return $pr.text();
     }
 }
 

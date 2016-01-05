@@ -2,7 +2,7 @@
 
 var URL = "Your Spread Sheet Address";
 
-function addNewLine(word, meaning) {
+function addNewLine(word, meaning, url, pron) {
     var spreadsheet = SpreadsheetApp.openByUrl(URL);
     var sheet = spreadsheet.getSheets()[0];
 
@@ -12,11 +12,13 @@ function addNewLine(word, meaning) {
     sheet.getRange(lastRow + 1, 1).setValue(now);
     sheet.getRange(lastRow + 1, 2).setValue(word);
     sheet.getRange(lastRow + 1, 3).setValue(meaning);
+    sheet.getRange(lastRow + 1, 4).setValue(url);
+    sheet.getRange(lastRow + 1, 5).setValue(pron);
 }
 
 function doPost(request) {
     try {
-        addNewLine(request.parameters.word, request.parameters.meaning);
+        addNewLine(request.parameters.word, request.parameters.meaning, request.parameters.url, request.parameters.pron);
         var result = {
             code: 0,
             message: "success"
